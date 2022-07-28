@@ -141,7 +141,6 @@ h1,h2,h3,h4,p,figure,ul,li{
 }
 .navBar .topOption li{
     color: white;
-    padding: 0 20px;
     position: relative;
     transition: .5s;
     height: 100%;
@@ -149,7 +148,7 @@ h1,h2,h3,h4,p,figure,ul,li{
     align-items: center;
 }
 .navBar .topOption li a{
-    padding: 19px 0;
+    padding: 42px 20px;
 }
 .navBar .topOption li .bottomLine{
     position: absolute;
@@ -320,6 +319,7 @@ h1,h2,h3,h4,p,figure,ul,li{
     padding: 20px 0;
     font-size: 18px;
     line-height: 29px;
+    font-weight: normal;
 }
 .zone__describe{
     width: 40%;
@@ -607,7 +607,8 @@ h1,h2,h3,h4,p,figure,ul,li{
     }
     .navBar_h5 .logoZone{
         position: relative;
-        height: 30px;
+        /* height: 30px; */
+        width: 140px;
         padding-left: 10px;
     }
     .navBar_h5 .logoZone img{
