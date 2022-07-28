@@ -1,6 +1,10 @@
 /*------reset-------*/
 body,figure{
     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+em{
+    font-style: normal;
 }
 a{
     text-decoration: none;
@@ -77,11 +81,33 @@ h1,h2,h3,h4,p,figure,ul,li{
 
 .wrapper{
     width: 100%;
-    min-height: 1vh;
+    min-height: 100vh;
     background: url(../images/sportGamingBg.jpg) center no-repeat fixed;
     background-size: cover;
     overflow-x: hidden;
+    font-size: 18px;
 }
+.mainNavBg_t{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg
+      , #000000db, #000000);    top: 0;
+    left: 0;
+    transition: .5s;
+    opacity: 0;
+    transform: translateY(-80px);
+    box-shadow: 5px 5px 20px 0px #0000000d;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid #2f8cc7;
+    box-shadow: 0 5px 18px 2px #000000bd;
+  }
+  .mainNavBg_t.active{
+    opacity: 1;
+    transform: translateY(0);
+
+  }
 .navBar_h5{
     display: none;
 }
@@ -92,14 +118,16 @@ h1,h2,h3,h4,p,figure,ul,li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    background: black;
+    height: 105px;
+    /* background: black; */
     padding: 0 50px;
     box-sizing: border-box;
 }
 .navBar .logoZone{
     width: 150px;
     height: 50px;
+    position: relative;
+    z-index: 10;
 }
 .navBar .logoZone img{
     width: 100%;
@@ -127,14 +155,14 @@ h1,h2,h3,h4,p,figure,ul,li{
     position: absolute;
     width: 0;
     height: 3px;
-    background: rgb(85, 85, 255);
+    background: #65b5e9;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     transition: .5s;
 }
 .navBar .topOption li:hover{
-    color: rgb(164, 164, 255);
+    color: #65b5e9;
 }
 .navBar .topOption li:hover .bottomLine{
     width: 100%;
@@ -143,11 +171,20 @@ h1,h2,h3,h4,p,figure,ul,li{
     display: none;
 }
 .topView{
-    padding-top: 60px;
+    /* padding-top: 60px; */
     width: 100%;
-    height: 756px;
-    background: url(../images/banner.png) center 60px no-repeat;
-    background-size: 2560px;
+    height: 86vh;
+    min-height: 716px;
+    background: url(../images/banner.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+}
+.topView__center{
+    width: 87vw;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
     position: relative;
 }
 .topView .mainLogo{
@@ -162,13 +199,55 @@ h1,h2,h3,h4,p,figure,ul,li{
 }
 .topView .rewardSlogan{
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px;
+    top: 64%;
+    right: 2%;
+    transform: translateY(-50%);
+    max-width: 711px;
+    width: 40vw;
+    transition: .5s;
 }
 .topView .rewardSlogan img{
     width: 100%;
+    animation: fadeUp 1.6s;
+}
+.topView__text{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 2%;
+    /* width: 34vw; */
+    color: white;
+}
+.topView__logo{
+    animation: fadeRight .5s;
+}
+.topView__text h1{
+    font-size: 120px;
+    animation: fadeRight 1s;
+    transition: .5s;
+}
+.topView__text h2{
+    font-size: 30px;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #65b5e9;
+    display: inline-block;
+    padding: 7px 36px;
+    border-radius: 0 50px 50px 0;
+    margin: 20px 0;
+    animation: fadeRight 1.5s;
+}
+.topView__text h1 em{
+    color: #65b5e9;
+}
+.topView__text p{
+    line-height: 30px;
+    width: 30vw;
+    animation: fadeRight 2s;
+}
+.topView__text p em{
+    font-weight: bolder;
+    color: #65b5e9;
 }
 .activeBtn{
     display: flex;
@@ -199,9 +278,9 @@ h1,h2,h3,h4,p,figure,ul,li{
     margin-top: 10px;
 }
 .content{
-    width: 1150px;
+    width: 80vw;
+    max-width: 1400px;
     margin: 0 auto;
-    /* height: 700px; */
 }
 .content section .beginning{
     color: white;
@@ -211,7 +290,12 @@ h1,h2,h3,h4,p,figure,ul,li{
 }
 
 .zone{
-    padding-top: 60px;
+    padding: 60px 0;
+}
+
+.zone.zone--flex{
+    display: flex;
+    align-items: center;
 }
 .zone .zoneTitle{
     height: 70px;
@@ -233,17 +317,62 @@ h1,h2,h3,h4,p,figure,ul,li{
 }
 .zone .describe{
     color: white;
-    padding: 20px 40px;
+    padding: 20px 0;
     font-size: 18px;
     line-height: 29px;
-    margin: 0 40px 20px;
+}
+.zone__describe{
+    width: 40%;
+    order: 1;
+}
+.zone__image{
+    flex: 1;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #4ba9e7, 0 0 66px #2f8cc7;
+    /* animation: flush 2s infinite; */
+    position: relative;
+}
+.zone__image:hover{
+    animation: flush 2s infinite;
+}
+.zone__image:before{
+    content:"點我展開";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    background-color: #2f8cc7;
+    color: white;
+}
+.zone:nth-child(even) .zone__image:before{
+    left: 0;
+    border-radius: 0 20px 20px 0;
+}
+.zone:nth-child(odd) .zone__image:before{
+    right: 0;
+    border-radius: 20px 0 0 20px;
+}
+.zone__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.zone:nth-child(even) .zone__image{
+    order: 2;
+    margin-left: 70px;
+}
+.zone:nth-child(odd) .zone__image{
+    margin-right: 70px;
 }
 .stepZone{
     display: flex;
-    margin: 0 30px 30px;
 }
 .stepZone .stepElement{
-    margin: 0 20px;
+    margin: 0 8px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -346,36 +475,97 @@ h1,h2,h3,h4,p,figure,ul,li{
     width: 35px;
     height: 35px;
     margin-right: 10px;
-    background: #88b1ff;
-    background: linear-gradient(180deg,#88b1ff,#3062be);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .contact li figure img{
-    width: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .contact li h1{
     color: white;
 }
-@media screen and (max-width: 1920px) {
-    .topView{
-        background-size: 1920px;
-        height: 627px;
-    }
+.main-title {
+    font-size: 40px;
+    line-height: 31px;
+    text-align: center;
+    font-weight: bold;
+    color: #65b5e9;
+    padding: 30px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
+.main-title__bar {
+    height: 2px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #65b5e9;
+}
+.main-title__stick {
+    width: 15px;
+    height: 15px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: rgba(0,0,0,0) !important;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+}
+.main-title__stick:nth-child(2) {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+.main-title em {
+    margin: 0 10px;
+    color: white;
+}
+/* light-case */
+#lightcase-content{
+    border-radius: 20px;
+}
+.lightcase-contentInner{
+    width: 90vh !important;
+    height: 90vh !important;
+    border-radius: 20px;
+}
+.lightcase-contentInner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: unset !important;
+    max-height: unset !important;
+}
+/* light-case */
+
 @media screen and (max-width: 1100px) {
     .content{
         width: 100%;
     }
     .topView{
-        background-size: 1120px;
-        height: 430px;
+        height: 50vh;
+        min-height: 691px;
+    }
+    .topView__text{
+        top: 50%;
     }
     .topView .rewardSlogan{
-        max-width: 753px;
-        width: 100%;
+        max-width: 698px;
+        width: 69vw;
+        right: -29%;
+        bottom: 9%;
+    }
+    .topView__text p{
+        width: 40vw;
+    }
+    .topView__text h1{
+        font-size: 81px;
     }
     .rule {
         padding: 0 10%;
@@ -390,12 +580,17 @@ h1,h2,h3,h4,p,figure,ul,li{
         top: 60px;
         width: 160px;
     }
-}
-@media screen and (max-width: 940px) {
-    .topView{
-        padding-top: 50px;
-        background-position: center 50px;
+    .zone:nth-child(odd) .zone__image{
+        border-radius: 0 20px 20px 0;
     }
+    .zone:nth-child(even) .zone__image{
+        border-radius: 20px 0 0 20px;
+    }
+    .zone .describe{
+        margin: 0 45px;
+    }
+
+    /* 漢堡選單開始 */
     .navBar{
         display: none;
     }
@@ -406,48 +601,22 @@ h1,h2,h3,h4,p,figure,ul,li{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 50px;
-        background: black;
+        height: 65px;
         padding: 0 10px;
         box-sizing: border-box;
     }
     .navBar_h5 .logoZone{
-        width: 150px;
-        height: 40px;
+        position: relative;
+        height: 30px;
+        padding-left: 10px;
     }
     .navBar_h5 .logoZone img{
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
-    /* .burgerBtn{
-        position: relative;
-        width: 30px;
-        height: 100%;
-        padding: 12px 0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction:column;
-        justify-content: space-between;
-    }
-    .burgerBtn .crossLine{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    .burgerBtn li,.burgerBtn .crossLine{
-        height: 2px;
-        width: 100%;
-        background: white;
-    }
-    .burgerBtn.active li{
-        opacity: 0;
-    }
-    .burgerBtn.active .left{
-        transform: rotate(45deg);
-    } */
     .burgerBtn{
+        position: relative;
         width: 50px;
         height: 100%;
         display: flex;
@@ -462,7 +631,8 @@ h1,h2,h3,h4,p,figure,ul,li{
         position: fixed;
         width: 40vw;
         height: 100vh;
-        background: #200d58ef;
+        background: #000000e5;
+        backdrop-filter: blur(9px);
         right: 0;
         top: 0;
         color: white;
@@ -485,8 +655,8 @@ h1,h2,h3,h4,p,figure,ul,li{
         position: absolute;
         width: 50px;
         height: 50px;
-        top: 0;
-        right: 7px;
+        top: 6px;
+        right: 9px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -494,19 +664,85 @@ h1,h2,h3,h4,p,figure,ul,li{
     .optionLine .closeBtn img{
         width: 40%;
     }
+    /* 漢堡選單結束 */
+
+    /* light-case */
+    .lightcase-contentInner{
+        width: 80vw !important;
+        height: 80vw !important;
+    }
+    /* light-case */
+
+}
+@media screen and (max-width: 940px) {
+    .wrapper{
+        background: url(../images/sportGamingBg.jpg) center repeat;
+    }
+
+    .zone__describe{
+        width: 55%;
+    }
+    .main-title{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .topView__text h2{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 753px) {
+    .topView__text h1{
+        font-size: 67px;
+    }
 }
 @media screen and (max-width: 613px) {
+    .topView__center{
+        width: 100vw;
 
+    }
     .optionLine{
         width: 60vw;
         transform: translateX(60vw);
     }
     .topView{
-        display: none;
+        height: 82vh;
+        min-height: 729px;
     }
-    .topView_h5{
+    /* .topView_h5{
         display: block;
         margin-top: 50px;
+    } */
+    .topView__text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: unset;
+        transform: unset;
+        padding-top: 29%;
+        position: relative;
+        left: unset;
+    }
+    .topView__text h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .topView__text h2{
+        font-size: 20px;
+        border-width: 1px 0;
+        border-radius: 0;
+    }
+    .topView__text p{
+        width: 75vw;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .topView .rewardSlogan{
+        bottom: -9%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: unset;
+        width: 111vw;
     }
     .topView_h5 img{
         width: 100%;
@@ -529,7 +765,7 @@ h1,h2,h3,h4,p,figure,ul,li{
         line-height: 20px;
     }
     .zone{
-        padding-top: 50px;
+        padding-top: 0;
     }
     .zone .zoneTitle{
         height: 30px;
@@ -539,11 +775,17 @@ h1,h2,h3,h4,p,figure,ul,li{
         font-size: 13px;
         line-height: 20px;
         padding: 0;
-        margin: 0 20px 20px;
+        margin: 0 30px;
     }
     .zone .describeTitle{
         font-size: 18px;
         padding: 10px 20px;
+    }
+    .zone:nth-child(odd) .zone__image{
+        margin-right: 0;
+    }
+    .zone:nth-child(even) .zone__image{
+        margin-left: 0;
     }
     .table{
         margin: 0 20px 20px;
@@ -591,7 +833,7 @@ h1,h2,h3,h4,p,figure,ul,li{
         margin: 5px;
     }
     .btnAria{
-        padding: 20px 0;
+        padding: 30px 0;
         flex-direction: column;
     }
     .btnAria .gogoBtn{
@@ -601,8 +843,36 @@ h1,h2,h3,h4,p,figure,ul,li{
     .btnAria .gogoBtn h1{
         font-size: 20px;
     }
+    .contact li{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact li figure{
+        margin: 0 0 10px;
+    }
+    .contact li h1{
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .zone__image:before{
+        animation: flushFading 1s infinite;
+    }
 }
-
+@media screen and (max-width: 470px) {
+    .topView{
+        min-height: 627px;
+    }
+    /* light-case */
+    #lightcase-content{
+        border-radius: 0 !important;
+    }
+    .lightcase-contentInner{
+        width: 100vw !important;
+        height: 100vw !important;
+        border-radius: 0;
+    }
+    /* light-case */
+}
 
 
 
@@ -613,13 +883,56 @@ h1,h2,h3,h4,p,figure,ul,li{
 
 @keyframes flush {
     0% {
-        filter: brightness(0.6);
+        filter: brightness(1);
     }
     50% {
-        filter: brightness(1.7);
+        filter: brightness(0.6);
     }
     100% {
-        filter: brightness(0.6);
+        filter: brightness(1);
+    }
+  }
+  @keyframes flushFading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
     }
   }
 
+  @keyframes fadeUp {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  @keyframes fadeRight {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  @keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
