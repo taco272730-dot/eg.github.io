@@ -1020,6 +1020,7 @@ video[poster]{
         bottom: -20%;
         max-width: 440px;
         width: 108vw;
+        top: unset;
     }
     .topView.inside .topView__text h1{
         font-size: 63px;
