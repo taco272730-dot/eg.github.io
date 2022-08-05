@@ -3,44 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>包網平台設計指南</title>
+    <title>包網平台UI規劃</title>
     <link rel="shortcut icon" href="images/ico.png">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="lightcase-2.5.0/src/css/lightcase.css">
     <link rel="stylesheet" href="css/aos.css">
 </head>
 <body>
- <div class="wrapper">
     <nav class="navBar" >
         <div class="mainNavBg_t"></div>
-        <a class="logoZone" href="#homeTop">
+        <a class="logoZone" href="https://taco272730-dot.github.io/eddie.github.io/" target="_blank">
             <img alt="" src="./images/navLogo.png"/>
         </a>
         <ul class="topOption">
-            <li>
-                <a href="#homeTop">Top</a>
+            <li class="option-home" data-select="true">
+                <a href="#">Home</a>
                 <div class="bottomLine"></div>
             </li>
-            <li>
-                <a href="#option01">Wireframe</a>
+            <li class="option-wireframe" data-select="false">
+                <a href="#">Wireframe</a>
                 <div class="bottomLine"></div>
             </li>
-            <li>
-                <a href="#option02">Mobile</a>
+            <li class="option-mobile" data-select="false">
+                <a href="#">Mobile</a>
                 <div class="bottomLine"></div>
             </li>
-            <li>
-                <a href="#option03">Desktop</a>
+            <li class="option-desktop" data-select="false">
+                <a href="#">Desktop</a>
                 <div class="bottomLine"></div>
             </li>
-            <li>
-                <a href="#option04">Varied</a>
+            <li class="option-varied" data-select="false">
+                <a href="#">Varied</a>
                 <div class="bottomLine"></div>
             </li>
-            <li>
+            <!-- <li class="option-customized" data-select="false">
                 <a href="#option05">Customized</a>
                 <div class="bottomLine"></div>
-            </li>
+            </li> -->
             <!-- <li>
                 <a href="https://taco272730-dot.github.io/yihe.github.io/yihe/#templates" target="_blank">Module</a>
                 <div class="bottomLine"></div>
@@ -49,7 +48,7 @@
     </nav>
     <nav class="navBar_h5">
         <div class="mainNavBg_t"></div>
-        <a class="logoZone" href="#homeTop">
+        <a class="logoZone" href="https://taco272730-dot.github.io/eddie.github.io/" target="_blank">
             <img alt="" src="./images/navLogo.png"/>
         </a>
         <!-- <div class="burgerBtn active">
@@ -62,257 +61,748 @@
             <img alt="" src="./images/burgerBtn.png"/>
         </div>
         <div class="optionLine">
-            <a href="#homeTop">Top</a>
-            <a href="#option01">Wireframe</a>
-            <a href="#option02">Mobile</a>
-            <a href="#option03">Desktop</a>
-            <a href="#option04">Varied</a>
-            <a href="#option05">Customized</a>
+            <a class="option-home" href="#" data-select="true">Home</a>
+            <a class="option-wireframe" href="#" data-select="false">Wireframe</a>
+            <a class="option-mobile" href="#" data-select="false">Mobile</a>
+            <a class="option-desktop" href="#" data-select="false">Desktop</a>
+            <a class="option-varied" href="#" data-select="false">Varied</a>
+            <!-- <a class="option-customized" href="#" data-select="false">Customized</a> -->
             <!-- <a href="https://taco272730-dot.github.io/yihe.github.io/yihe/#templates" target="_blank">Module</a> -->
             <div class="closeBtn">
                 <img alt="" src="./images/crossBtn.png"/>
             </div>
         </div>
     </nav>
-    <div class="topView" id="homeTop">
-        <div class="topView__center">
-            <!-- <figure class="mainLogo">
-                <img alt="" src="./images/mainLogo.png"/>
-            </figure> -->
-            <div class="topView__text">
-                <!-- <figure class="topView__logo">
-                    <img src="./images/navLogo.png" alt="">
+
+    <div class="wrapper home_page" data-select="true">
+        <div class="topView" id="homeTop">
+            <div class="topView__center">
+                <!-- <figure class="mainLogo">
+                    <img alt="" src="./images/mainLogo.png"/>
                 </figure> -->
-                <h1>Design <em>Guiding</em></h1>
-                <h2>包網平台設計指南</h2>
-                <p>有一個假設 : 如果只有一個月,就要從無到有創造一個包網平台,且從規劃到設計再到切版僅一人負責,這是個不可能的任務嗎?<br>但事實是 : <em>沒有不可能,只有不想將不可能化為可能!</em>
-                    <!-- <br>但我告訴你 : <br><em>沒有不可能,只有不想將不可能化為可能!</em> -->
-                </p>
+                <div class="topView__text">
+                    <!-- <figure class="topView__logo">
+                        <img src="./images/navLogo.png" alt="">
+                    </figure> -->
+                    <h1>Design <em>Guiding</em></h1>
+                    <h2>包網平台UI規劃</h2>
+                    <p>有一個假設 : 如果只有一個月,就要從無到有創造一個包網平台,且從規劃到設計再到切版僅一人負責,這是個不可能的任務嗎?<br>但事實是 : <em>沒有不可能,只有不想將不可能化為可能!</em>
+                        <!-- <br>但我告訴你 : <br><em>沒有不可能,只有不想將不可能化為可能!</em> -->
+                    </p>
+                </div>
+                <figure class="rewardSlogan">
+                    <img alt="" src="./images/main_mobile.png"/>
+                </figure>
             </div>
-            <figure class="rewardSlogan">
-                <img alt="" src="./images/main_mobile.png"/>
-            </figure>
+
+        </div>
+        <div class="content">
+            <!-- <section>
+                <h1 class="beginning uniOuter">NAB例行赛开打，猫先生体育，开启首波赛事预测天梯赛季。 赛季奖金高达1000万USDT，让你追赛事的同时，也能享受最新的竞猜娱乐。 每个月我们将会根据玩家的赛季排名来发放对应的奖金, 最高可独得奖金可达168,888 USDT。 每月夺得赛季最高奖金之玩家，将有资格在季后赛中进行赛事奖金更高的竞猜赛事，同时能享有意外的大奖。</h1>
+                <a class="activeBtn" href="kk.mdj.bet">
+                    <h1>NBA天梯赛 立即启程 竞猜娱乐 开启财富之旅</h1>
+                    <h2> >>> 马上行动 <<< </h2>
+                </a>
+            </section> -->
+            <section class="zone zone--flex" id="option01">
+                <div class="zone__describe">
+                    <div class="main-title" data-aos="fade-up" data-aos-duration="500">
+                        <div class="main-title__bar"></div>
+                        <div class="main-title__stick"></div>
+                        <em>Wireframe</em>
+                        <div class="main-title__stick"></div>
+                        <div class="main-title__bar"></div>
+                    </div>
+                    <h1 class="describe" 
+                        data-aos="fade-up" 
+                        data-aos-duration="500" 
+                        data-aos-delay="200"
+                    >
+                    規劃明確的user的使用動線,透過架構圖來呈現不同頁面之間的連結關係,簡潔明瞭的prototype在堤案時絕對是不可或缺的利器,包網涉及的頁面眾多,如何優化各功能的連動關係,考驗著設計師的使用者經驗.
+                    </h1>
+            
+                </div>
+                <a class="zone__image zone__image--wireframe" href="#" 
+                    data-aos="fade-right" 
+                    data-aos-duration="500"
+                >                
+                    <img alt="" src="./images/style_img_01.jpg"/>
+                </a>
+            </section>
+            <section class="zone zone--flex" id="option02">
+                <div class="zone__describe">
+                    <div class="main-title" data-aos="fade-up" data-aos-duration="500">
+                        <div class="main-title__bar"></div>
+                        <div class="main-title__stick"></div>
+                        <em>Mobile</em>
+                        <div class="main-title__stick"></div>
+                        <div class="main-title__bar"></div>
+                    </div>
+                    <h1 class="describe" 
+                        data-aos="fade-up" 
+                        data-aos-duration="500" 
+                        data-aos-delay="200"
+                    >
+                    手機銀幕尺寸較小,雖不能像桌機一樣容納大量的內容,但在有限的空間中,有效呈現使用者最核心的功能是手機介面設計的宗旨,在不同介面的切換中加入動態效果做輔助,讓使用者在操作時不會感到單調而乏味.
+                    </h1>
+                </div>
+                <a class="zone__image zone__image--mobile" href="#" 
+                    data-aos="fade-left" 
+                    data-aos-duration="500"
+                >
+                    <img alt="" src="./images/style_img_02.jpg"/>
+                </a>
+            </section>
+            <section class="zone zone--flex" id="option03">
+                <div class="zone__describe">
+                    <div class="main-title" data-aos="fade-up" data-aos-duration="500">
+                        <div class="main-title__bar"></div>
+                        <div class="main-title__stick"></div>
+                        <em>Desktop</em>
+                        <div class="main-title__stick"></div>
+                        <div class="main-title__bar"></div>
+                    </div>
+                    <h1 class="describe" 
+                        data-aos="fade-up" 
+                        data-aos-duration="500" 
+                        data-aos-delay="200"
+                    >
+                    桌機銀幕尺寸大,能容納的內容眾多,畫面呈現上如何豐富飽滿而又不至於讓人眼花撩亂,是一項很重要的課題,首頁除了基礎入口功能,也會增加許多如介紹欄位等豐富主題的元素,整體設計以簡約明瞭的方式讓複雜的操作過程更顯單純.
+                    </h1>        
+                </div>
+                <a class="zone__image zone__image--desktop" href="#" 
+                    data-aos="fade-right" 
+                    data-aos-duration="500"
+                >                
+                    <img alt="" src="./images/style_img_03.jpg"/>
+                </a>
+            </section>
+            <section class="zone zone--flex" id="option04">
+                <div class="zone__describe">
+                    <div class="main-title" data-aos="fade-up" data-aos-duration="500">
+                        <div class="main-title__bar"></div>
+                        <div class="main-title__stick"></div>
+                        <em>Varied</em>
+                        <div class="main-title__stick"></div>
+                        <div class="main-title__bar"></div>
+                    </div>
+                    <h1 class="describe" 
+                        data-aos="fade-up" 
+                        data-aos-duration="500" 
+                        data-aos-delay="200"
+                    >
+                        多樣化的模板樣式提供客戶最快速的即時選擇,讓客戶可以在現有的模板中從中選擇喜好的模板來進行快速上架,目前現成模板以提供26組,透過組件的組合方式,更可搭配出超過1000種的模板風格.
+                    </h1>
+                </div>
+                <a class="zone__image zone__image--varied" href="#" 
+                    data-aos="fade-left" 
+                    data-aos-duration="500"
+                    data-aos-anchor-placement="#example-anchor"
+                >
+                    <img alt="" src="./images/style_img_04.jpg"/>
+                </a>
+            </section>
+            <!-- <section class="zone zone--flex" id="option05">
+                <div class="zone__describe">
+                    <div class="main-title" data-aos="fade-up" data-aos-duration="500">
+                        <div class="main-title__bar"></div>
+                        <div class="main-title__stick"></div>
+                        <em>Customized</em>
+                        <div class="main-title__stick"></div>
+                        <div class="main-title__bar"></div>
+                    </div>
+                    <h1 class="describe" 
+                        data-aos="fade-up" 
+                        data-aos-duration="500" 
+                        data-aos-delay="200"
+                    >
+                    介面首頁所有的組件皆為獨立設計,分門別類設計超過15種類別,每種類別各有超過10種以上的元件設計,可依照客戶的需求設計出截然不同的組件樣式,並與其他組件相互搭配,顏色亦可自由選擇,提供客戶與眾不同的產品外觀.
+                    </h1>
+                </div>
+                <a class="zone__image zone__image--customized" href="#"
+                    data-aos="fade-right" 
+                    data-aos-duration="500"
+                    data-aos-anchor-placement="#example-anchor"
+                >
+                    <img alt="" src="./images/style_img_05.jpg"/>
+                </a>
+            </section> -->
+            <!-- <section class="zone" id="option02">
+                <figure class="zoneTitle">
+                    <img alt="" src="./images/sepTitle02.png"/>
+                </figure>
+                <aside class="howPlay">
+                    <h2 class="describeTitle">如何参与猫先生NBA天梯竞猜赛?</h2>
+                    <h1 class="describe">
+                        你只需要在猫先生体育注册账户完成，并完成小额充值即可参与本活动。
+                        一人只能注册一个帐户，如被系统侦测拥有一个以上账户，即会被取消资格。                
+                    </h1>
+                </aside>
+                <aside class="howPlay">
+                    <h2 class="describeTitle">经验值成就是什么?</h2>
+                    <h1 class="describe">
+                        经验值成就是在竞猜赛事中将会产生，每一次完成赛事预测竞猜，都会得到对等竞猜筹码的流水经验值，竞猜准度越高将会大幅提升晋级升阶的机会。
+                        (水位会影响经验值取得)                </h1>
+                </aside>
+                <aside class="howPlay">
+                    <h2 class="describeTitle">充值经验成就是什么?</h2>
+                    <h1 class="describe">
+                        为了提高竞猜娱乐的乐趣，同时也兼顾着杠杆投资的元素，玩家的每笔充值都将会得到对等的经验值成就，达到大神阶段有机会可得最高杠杆倍数20倍以上，外加上彩池奖金168,888 USDT，买门票看比赛还有高额奖金等你来拿。                </h1>
+                </aside>
+            </section>
+            <section class="zone" id="option03">
+                <figure class="zoneTitle">
+                    <img alt="" src="./images/sepTitle03.png"/>
+                </figure>
+
+                <a class="activeBtn" href="kk.mdj.bet">
+                    <h1>NBA天梯赛 立即启程 竞猜娱乐 开启财富之旅</h1>
+                    <h2> >>> 马上行动 <<< </h2>
+                </a>
+            </section>
+            <section class="zone" id="option04">
+                <figure class="zoneTitle">
+                    <img alt="" src="./images/sepTitle04.png"/>
+                </figure>
+                <aside class="rule">
+                    <li>
+                        <h1>1.</h1>
+                        <p>活动赛季时间除早鸟阶段外皆于每个月的第一天即1号起开始计算，月底或赛季结束当日23:59结算，活动定义时间为北京时间。</p>
+                    </li>
+                    <li>
+                        <h1>2.</h1>
+                        <p>参与此竞猜活动的玩家，于该赛季中无法同时申请领取渠道红利，若申请渠道相关红利，视同弃权，则于该赛季中将不会发放任何活动奖励。</p>
+                    </li>
+                    <li>
+                        <h1>3.</h1>
+                        <p>每个玩家只可持有一个账号来参与此活动竞赛，若发现恶意套利或是作弊手段等等，将会被取消该赛季参赛资格。</p>
+                    </li>
+                    <li>
+                        <h1>4.</h1>
+                        <p>申请红利前需要完成手机验证。</p>
+                    </li>
+                    <li>
+                        <h1>5.</h1>
+                        <p>活动结束后，参与活动的玩家须自行联系客服或VIP专员来查询段位，及派发奖励，需双项经验值都达到该门坎，才可领取该门坎对应之奖励，若只有单项达标，则以达标最低等级来做评断，奖励发送时间需3-5个工作日。</p>
+                    </li>
+                    <li>
+                        <h1>6.</h1>
+                        <p>每个赛季结算过后，经验值将重新归零，下个赛季每个玩家将会从零开始继续挑战，玩家共有三次的机会可以挑战段位的资格。</p>
+                    </li>
+                    <li>
+                        <h1>7.</h1>
+                        <p>玩家彩池红利提领，只需打取10倍红利之流水即可领取。</p>
+                    </li>
+                    <li>
+                        <h1>8.</h1>
+                        <p>猫先生体育保有最终解释权及活动更改之权利，若发生人为或不可抗之因素，则可依情况调整活动之内容。</p>
+                    </li>
+                </aside>
+            </section> -->
         </div>
 
-    </div>
-    <div class="topView_h5">
-        <img alt="" src="images/banner_h5.png"/>
-    </div>
-    <div class="content">
-        <!-- <section>
-            <h1 class="beginning uniOuter">NAB例行赛开打，猫先生体育，开启首波赛事预测天梯赛季。 赛季奖金高达1000万USDT，让你追赛事的同时，也能享受最新的竞猜娱乐。 每个月我们将会根据玩家的赛季排名来发放对应的奖金, 最高可独得奖金可达168,888 USDT。 每月夺得赛季最高奖金之玩家，将有资格在季后赛中进行赛事奖金更高的竞猜赛事，同时能享有意外的大奖。</h1>
-            <a class="activeBtn" href="kk.mdj.bet">
-                <h1>NBA天梯赛 立即启程 竞猜娱乐 开启财富之旅</h1>
-                <h2> >>> 马上行动 <<< </h2>
-            </a>
-        </section> -->
-        <section class="zone zone--flex" id="option01">
-            <div class="zone__describe">
-                <div class="main-title" data-aos="fade-up" data-aos-duration="500">
-                    <div class="main-title__bar"></div>
-                    <div class="main-title__stick"></div>
-                    <em>Wireframe</em>
-                    <div class="main-title__stick"></div>
-                    <div class="main-title__bar"></div>
-                </div>
-                <h1 class="describe" 
-                    data-aos="fade-up" 
-                    data-aos-duration="500" 
-                    data-aos-delay="200"
-                >
-                   規劃明確的user的使用動線,透過架構圖來呈現不同頁面之間的連結關係,簡潔明瞭的prototype在堤案時絕對是不可或缺的利器,包網涉及的頁面眾多,如何優化各功能的連動關係,考驗著設計師的使用者經驗.
-                </h1>
-        
-            </div>
-            <a class="zone__image" href="images/style_img_01.jpg" data-rel="lightcase:myCollection_web" target="_blank" 
-                data-aos="fade-right" 
-                data-aos-duration="500"
-            >                
-                <img alt="" src="./images/style_img_01.jpg"/>
-            </a>
-        </section>
-        <section class="zone zone--flex" id="option02">
-            <div class="zone__describe">
-                <div class="main-title" data-aos="fade-up" data-aos-duration="500">
-                    <div class="main-title__bar"></div>
-                    <div class="main-title__stick"></div>
-                    <em>Mobile</em>
-                    <div class="main-title__stick"></div>
-                    <div class="main-title__bar"></div>
-                </div>
-                <h1 class="describe" 
-                    data-aos="fade-up" 
-                    data-aos-duration="500" 
-                    data-aos-delay="200"
-                >
-                   手機銀幕尺寸較小,雖不能像桌機一樣容納大量的內容,但在有限的空間中,有效呈現使用者最核心的功能是手機介面設計的宗旨,在不同介面的切換中加入動態效果做輔助,讓使用者在操作時不會感到單調而乏味.
-                </h1>
-            </div>
-            <a class="zone__image" href="images/style_img_02.jpg" data-rel="lightcase:myCollection_web" target="_blank" 
-                data-aos="fade-left" 
-                data-aos-duration="500"
-                data-aos-anchor-placement="#example-anchor"
-            >
-                <img alt="" src="./images/style_img_02.jpg"/>
-            </a>
-        </section>
-        <section class="zone zone--flex" id="option03">
-            <div class="zone__describe">
-                <div class="main-title" data-aos="fade-up" data-aos-duration="500">
-                    <div class="main-title__bar"></div>
-                    <div class="main-title__stick"></div>
-                    <em>Desktop</em>
-                    <div class="main-title__stick"></div>
-                    <div class="main-title__bar"></div>
-                </div>
-                <h1 class="describe" 
-                    data-aos="fade-up" 
-                    data-aos-duration="500" 
-                    data-aos-delay="200"
-                >
-                桌機銀幕尺寸大,能容納的內容眾多,畫面呈現上如何豐富飽滿而又不至於讓人眼花撩亂,是一項很重要的課題,首頁除了基礎入口功能,也會增加許多如介紹欄位等豐富主題的元素,整體設計以簡約明瞭的方式讓複雜的操作過程更顯單純.
-                </h1>        
-            </div>
-            <a class="zone__image" href="images/style_img_03.jpg" data-rel="lightcase:myCollection_web" target="_blank" 
-                data-aos="fade-right" 
-                data-aos-duration="500"
-            >                
-                <img alt="" src="./images/style_img_03.jpg"/>
-            </a>
-        </section>
-        <section class="zone zone--flex" id="option04">
-            <div class="zone__describe">
-                <div class="main-title" data-aos="fade-up" data-aos-duration="500">
-                    <div class="main-title__bar"></div>
-                    <div class="main-title__stick"></div>
-                    <em>Varied</em>
-                    <div class="main-title__stick"></div>
-                    <div class="main-title__bar"></div>
-                </div>
-                <h1 class="describe" 
-                    data-aos="fade-up" 
-                    data-aos-duration="500" 
-                    data-aos-delay="200"
-                >
-                    多樣性的模板樣式提供客戶最快速的即時選擇,讓客戶可以在現有的模板中從中選擇喜好的模板來進行快速上架,目前現成模板以提供26組,透過組件的組合方式,更可搭配出超過1000種的模板風格.
-                </h1>
-            </div>
-            <a class="zone__image" href="images/style_img_04.jpg" data-rel="lightcase:myCollection_web" target="_blank" 
-                data-aos="fade-left" 
-                data-aos-duration="500"
-                data-aos-anchor-placement="#example-anchor"
-            >
-                <img alt="" src="./images/style_img_04.jpg"/>
-            </a>
-        </section>
-        <section class="zone zone--flex" id="option05">
-            <div class="zone__describe">
-                <div class="main-title" data-aos="fade-up" data-aos-duration="500">
-                    <div class="main-title__bar"></div>
-                    <div class="main-title__stick"></div>
-                    <em>Customized</em>
-                    <div class="main-title__stick"></div>
-                    <div class="main-title__bar"></div>
-                </div>
-                <h1 class="describe" 
-                    data-aos="fade-up" 
-                    data-aos-duration="500" 
-                    data-aos-delay="200"
-                >
-                   介面首頁所有的組件皆為獨立設計,分門別類設計超過15種類別,每種類別各有超過10種以上的元件設計,可依照客戶的需求設計出截然不同的組件樣式,並與其他組件相互搭配,顏色亦可自由選擇,提供客戶與眾不同的產品外觀.
-                </h1>
-            </div>
-            <a class="zone__image" href="images/style_img_05.jpg" data-rel="lightcase:myCollection_web" target="_blank" 
-                data-aos="fade-right" 
-                data-aos-duration="500"
-                data-aos-anchor-placement="#example-anchor"
-            >
-                <img alt="" src="./images/style_img_05.jpg"/>
-            </a>
-        </section>
-        <!-- <section class="zone" id="option02">
-            <figure class="zoneTitle">
-                <img alt="" src="./images/sepTitle02.png"/>
-            </figure>
-            <aside class="howPlay">
-                <h2 class="describeTitle">如何参与猫先生NBA天梯竞猜赛?</h2>
-                <h1 class="describe">
-                    你只需要在猫先生体育注册账户完成，并完成小额充值即可参与本活动。
-                    一人只能注册一个帐户，如被系统侦测拥有一个以上账户，即会被取消资格。                
-                </h1>
-            </aside>
-            <aside class="howPlay">
-                <h2 class="describeTitle">经验值成就是什么?</h2>
-                <h1 class="describe">
-                    经验值成就是在竞猜赛事中将会产生，每一次完成赛事预测竞猜，都会得到对等竞猜筹码的流水经验值，竞猜准度越高将会大幅提升晋级升阶的机会。
-                    (水位会影响经验值取得)                </h1>
-            </aside>
-            <aside class="howPlay">
-                <h2 class="describeTitle">充值经验成就是什么?</h2>
-                <h1 class="describe">
-                    为了提高竞猜娱乐的乐趣，同时也兼顾着杠杆投资的元素，玩家的每笔充值都将会得到对等的经验值成就，达到大神阶段有机会可得最高杠杆倍数20倍以上，外加上彩池奖金168,888 USDT，买门票看比赛还有高额奖金等你来拿。                </h1>
-            </aside>
-        </section>
-        <section class="zone" id="option03">
-            <figure class="zoneTitle">
-                <img alt="" src="./images/sepTitle03.png"/>
-            </figure>
 
-            <a class="activeBtn" href="kk.mdj.bet">
-                <h1>NBA天梯赛 立即启程 竞猜娱乐 开启财富之旅</h1>
-                <h2> >>> 马上行动 <<< </h2>
-            </a>
-        </section>
-        <section class="zone" id="option04">
-            <figure class="zoneTitle">
-                <img alt="" src="./images/sepTitle04.png"/>
-            </figure>
-            <aside class="rule">
-                <li>
-                    <h1>1.</h1>
-                    <p>活动赛季时间除早鸟阶段外皆于每个月的第一天即1号起开始计算，月底或赛季结束当日23:59结算，活动定义时间为北京时间。</p>
-                </li>
-                <li>
-                    <h1>2.</h1>
-                    <p>参与此竞猜活动的玩家，于该赛季中无法同时申请领取渠道红利，若申请渠道相关红利，视同弃权，则于该赛季中将不会发放任何活动奖励。</p>
-                </li>
-                <li>
-                    <h1>3.</h1>
-                    <p>每个玩家只可持有一个账号来参与此活动竞赛，若发现恶意套利或是作弊手段等等，将会被取消该赛季参赛资格。</p>
-                </li>
-                <li>
-                    <h1>4.</h1>
-                    <p>申请红利前需要完成手机验证。</p>
-                </li>
-                <li>
-                    <h1>5.</h1>
-                    <p>活动结束后，参与活动的玩家须自行联系客服或VIP专员来查询段位，及派发奖励，需双项经验值都达到该门坎，才可领取该门坎对应之奖励，若只有单项达标，则以达标最低等级来做评断，奖励发送时间需3-5个工作日。</p>
-                </li>
-                <li>
-                    <h1>6.</h1>
-                    <p>每个赛季结算过后，经验值将重新归零，下个赛季每个玩家将会从零开始继续挑战，玩家共有三次的机会可以挑战段位的资格。</p>
-                </li>
-                <li>
-                    <h1>7.</h1>
-                    <p>玩家彩池红利提领，只需打取10倍红利之流水即可领取。</p>
-                </li>
-                <li>
-                    <h1>8.</h1>
-                    <p>猫先生体育保有最终解释权及活动更改之权利，若发生人为或不可抗之因素，则可依情况调整活动之内容。</p>
-                </li>
-            </aside>
-        </section> -->
     </div>
+    <div class="wrapper wireframe_page" data-select="false">
+        <div class="topView inside" id="homeTop">
+            <div class="topView__center">
+                <div class="topView__text">
+                    <h1><em>W</em>ireframe</h1>
+                    <h2>線稿樣式精華</h2>
+                </div>
+                <figure class="rewardSlogan">
+                    <img alt="" src="./images/main_mobile-wireframe.png"/>
+                </figure>
+            </div>
+        </div>
+        <div class="content inside">
+            <section class="show-box">
+                <div class="show-box__title">
+                    <h1>Mobile</h1>
+                    <div class="show-box__sub">
+                        <div class="show-box__bar"></div>
+                        <h2>手機版線稿</h2>
+                        <div class="show-box__bar"></div>
+                    </div>
+                </div>
+                <div class="show-box__content">
+                    <a class="show-box__element" href="images/style_img_01.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/style_img_01.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 01</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex002_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex002_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 02</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex003_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex003_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 03</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex004_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex004_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 04</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex005_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex005_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 05</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex006_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex006_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 06</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex007_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex007_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 07</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex008_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex008_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 08</h1>
+                    </a>
+                </div>
+            </section>
+            <section class="show-box">
+                <div class="show-box__title">
+                    <h1>Desktop</h1>
+                    <div class="show-box__sub">
+                        <div class="show-box__bar"></div>
+                        <h2>電腦版線稿</h2>
+                        <div class="show-box__bar"></div>
+                    </div>
+                </div>
+                <div class="show-box__content">
+                    <a class="show-box__element" href="images/complex001_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex001_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 01</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex002_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex002_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 02</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex003_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex003_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 03</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex004_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex004_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 04</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex005_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex005_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 05</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex006_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex006_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 06</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex007_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex007_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 07</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex008_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex008_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 08</h1>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <div class="wrapper mobile_page" data-select="false">
+        <div class="topView inside" id="homeTop">
+            <div class="topView__center">
+                <div class="topView__text">
+                    <h1><em>M</em>obile</h1>
+                    <h2>手機頁面樣式</h2>
+                </div>
+                <figure class="rewardSlogan">
+                    <img alt="" src="./images/main_mobile-mobile.png"/>
+                </figure>
+            </div>
+        </div>
+        <div class="content inside">
+            <section class="video-box">
+                <video class="video-box__video" controls poster="./images/video_mobile.jpg" autoplay="autoplay">
+                    <source src="./video/movie_mobile.mov" type="video/mp4">
+                </video>
+                <div class="video-box__describe">
+                    <div class="main-title">
+                        <div class="main-title__bar"></div>
+                        <div class="main-title__stick"></div>
+                        <em>操作實錄</em>
+                        <div class="main-title__stick"></div>
+                        <div class="main-title__bar"></div>
+                    </div>
+                    <h1 class="video-box__content" >
+                    規劃明確的user的使用動線,透過架構圖來呈現不同頁面之間的連結關係,簡潔明瞭的prototype在堤案時絕對是不可或缺的利器,包網涉及的頁面眾多,如何優化各功能的連動關係,考驗著設計師的使用者經驗.
+                    </h1>
+                </div>
+            </section>
+            <section class="show-box">
+                <div class="show-box__content">
+                    <a class="show-box__element" href="images/mobile001-home.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile001-home.jpg" alt=""/>
+                        </figure>
+                        <h1>首頁</h1>
+                    </a>
+                    <a class="show-box__element" href="images/mobile002-cneter.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile002-cneter.jpg" alt=""/>
+                        </figure>
+                        <h1>個人中心</h1>
+                    </a>
+                    <a class="show-box__element" href="images/mobile003-deposit.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile003-deposit.jpg" alt=""/>
+                        </figure>
+                        <h1>充值頁面</h1>
+                    </a>
+                    <a class="show-box__element" href="images/mobile004-withdraw.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile004-withdraw.jpg" alt=""/>
+                        </figure>
+                        <h1>取款頁面</h1>
+                    </a>
+                    <a class="show-box__element" href="images/mobile005-records.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile005-records.jpg" alt=""/>
+                        </figure>
+                        <h1>財務中心</h1>
+                    </a>
+                    <a class="show-box__element" href="images/mobile006-safety.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile006-safety.jpg" alt=""/>
+                        </figure>
+                        <h1>帳號與安全</h1>
+                    </a>
+                    <a class="show-box__element" href="images/mobile007-letters.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile007-letters.jpg" alt=""/>
+                        </figure>
+                        <h1>站內信</h1>
+                    </a>
+                    <a class="show-box__element" href="images/mobile008-acrivity.jpg" data-rel="lightcase:mobile" target="_blank">
+                        <figure>
+                            <img src="images/mobile008-acrivity.jpg" alt=""/>
+                        </figure>
+                        <h1>優惠活動</h1>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="wrapper desktop_page" data-select="false">
+        <div class="topView inside" id="homeTop">
+            <div class="topView__center">
+                <div class="topView__text">
+                    <h1><em>D</em>esktop</h1>
+                    <h2>電腦頁面樣式</h2>
+                </div>
+                <figure class="rewardSlogan">
+                    <img alt="" src="./images/main_mobile-desktop.png"/>
+                </figure>
+            </div>
+        </div>
+        <div class="content inside">
+            <section class="video-box">
+                <video class="video-box__video" controls poster="./images/video_desktop.jpg" autoplay="autoplay">
+                    <source src="./video/movie_desktop.mov" type="video/mp4">
+                </video>
+                <div class="video-box__describe">
+                    <div class="main-title">
+                        <div class="main-title__bar"></div>
+                        <div class="main-title__stick"></div>
+                        <em>操作實錄</em>
+                        <div class="main-title__stick"></div>
+                        <div class="main-title__bar"></div>
+                    </div>
+                    <h1 class="video-box__content" >
+                    規劃明確的user的使用動線,透過架構圖來呈現不同頁面之間的連結關係,簡潔明瞭的prototype在堤案時絕對是不可或缺的利器,包網涉及的頁面眾多,如何優化各功能的連動關係,考驗著設計師的使用者經驗.
+                    </h1>
+                </div>
+            </section>
+            <section class="show-box">
+                <div class="show-box__content">
+                    <a class="show-box__element" href="images/desktop001-home.jpg" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop001-home.jpg" alt=""/>
+                        </figure>
+                        <h1>首頁</h1>
+                    </a>
+                    <a class="show-box__element" href="images/desktop002-deposit.jpg" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop002-deposit.jpg" alt=""/>
+                        </figure>
+                        <h1>存款頁面</h1>
+                    </a>
+                    <a class="show-box__element" href="images/desktop003-withdraw.jpg" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop003-withdraw.jpg" alt=""/>
+                        </figure>
+                        <h1>取款頁面</h1>
+                    </a>
+                    <a class="show-box__element" href="images/desktop004-letters.jpg" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop004-letters.jpg" alt=""/>
+                        </figure>
+                        <h1>站內信</h1>
+                    </a>
+                    <a class="show-box__element" href="images/desktop005-lottery.png" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop005-lottery.png" alt=""/>
+                        </figure>
+                        <h1>彩票頁面</h1>
+                    </a>
+                    <a class="show-box__element" href="images/desktop006-score.png" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop006-score.png" alt=""/>
+                        </figure>
+                        <h1>代理業績</h1>
+                    </a>
+                    <a class="show-box__element" href="images/desktop007-team.png" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop007-team.png" alt=""/>
+                        </figure>
+                        <h1>團隊統計</h1>
+                    </a>
+                    <a class="show-box__element" href="images/desktop008-leaderboard.png" data-rel="lightcase:desktop" target="_blank">
+                        <figure>
+                            <img src="images/desktop008-leaderboard.png" alt=""/>
+                        </figure>
+                        <h1>下級排行榜</h1>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="wrapper varied_page" data-select="false">
+        <div class="topView inside" id="homeTop">
+            <div class="topView__center">
+                <div class="topView__text">
+                    <h1><em>V</em>aried</h1>
+                    <h2>多樣化模板</h2>
+                </div>
+                <figure class="rewardSlogan">
+                    <img alt="" src="./images/main_mobile-varied.png"/>
+                </figure>
+            </div>
+        </div>
+        <div class="content inside">
+            <section class="show-box">
+                <div class="show-box__title">
+                    <h1>Mobile</h1>
+                    <div class="show-box__sub">
+                        <div class="show-box__bar"></div>
+                        <h2>手機版模板</h2>
+                        <div class="show-box__bar"></div>
+                    </div>
+                </div>
+                <div class="show-box__content">
+                    <a class="show-box__element" href="images/complex001_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex001_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 01</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex002_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex002_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 02</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex003_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex003_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 03</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex004_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex004_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 04</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex005_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex005_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 05</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex006_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex006_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 06</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex007_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex007_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 07</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex008_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex008_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 08</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex009_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex009_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 09</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex010_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex010_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 10</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex011_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex011_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 11</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex012_mobile.jpg" data-rel="lightcase:varied_mobile" target="_blank">
+                        <figure>
+                            <img src="images/complex012_mobile.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 12</h1>
+                    </a>
+                </div>
+            </section>
+            <section class="show-box">
+                <div class="show-box__title">
+                    <h1>Desktop</h1>
+                    <div class="show-box__sub">
+                        <div class="show-box__bar"></div>
+                        <h2>電腦版模板</h2>
+                        <div class="show-box__bar"></div>
+                    </div>
+                </div>
+                <div class="show-box__content">
+                    <a class="show-box__element" href="images/complex001_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex001_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 01</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex002_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex002_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 02</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex003_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex003_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 03</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex004_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex004_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 04</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex005_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex005_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 05</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex006_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex006_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 06</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex007_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex007_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 07</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex008_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex008_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 08</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex009_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex009_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 09</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex010_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex010_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 10</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex011_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex011_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 11</h1>
+                    </a>
+                    <a class="show-box__element" href="images/complex012_pc.jpg" data-rel="lightcase:varied_pc" target="_blank">
+                        <figure>
+                            <img src="images/complex012_pc.jpg" alt=""/>
+                        </figure>
+                        <h1>Module 12</h1>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
     <div class="btnAria">
-        <a class="contact" href="#homeTop">
+        <a class="contact" href="https://taco272730-dot.github.io/eddie.github.io/" target="_blank">
             <li>
                 <figure><img alt="" src="./images/ico.png"/></figure>
                 <h1>©Copyright 2022. All Rights reserved by Eddie.</h1>
             </li>
         </a>
     </div>
-
- </div>
+    <div id="top">
+        <a class="top_btn" href="#homeTop"><i class="fas fa-angle-up "></i></a>
+    </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
@@ -427,17 +917,112 @@
 	});
 
     $('.burgerBtn').click(function(){
-        $(".optionLine").addClass("active")
+        $(".optionLine").attr("data-open", "true")
     });
     $(".closeBtn").click(function(){
-        $(".optionLine").removeClass("active")
+        $(".optionLine").attr("data-open", "false")
     });
     $(".optionLine a").click(function(){
-        $(".optionLine").removeClass("active")
+        $(".optionLine").attr("data-open", "false")
     });
     $(".logoZone").click(function(){
-        $(".optionLine").removeClass("active")
+        $(".optionLine").attr("data-open", "false")
     });
+
+    // 點擊空白處關閉選單(mobile)
+    $("body").on("click", function(e){  
+        var btn = $(".burgerBtn");
+        // 判斷點擊的地方不是DIV或按鈕
+        if(
+        !btn.is(e.target) &&
+        !btn.has(e.target).length
+        ){
+            $(".optionLine").attr("data-open", "false");
+        }
+    });
+
+    //切換頁面----------------------------------------------
+
+    //上方列表指向
+    $(".option-home").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".home_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-home").attr("data-select","true");
+    });
+    $(".option-wireframe").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".wireframe_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-wireframe").attr("data-select","true");
+    });
+    $(".option-mobile").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".mobile_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-mobile").attr("data-select","true");
+    });
+    $(".option-desktop").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".desktop_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-desktop").attr("data-select","true");
+    });
+    $(".option-varied").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".varied_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-varied").attr("data-select","true");
+    });
+    $(".option-customized").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".customized_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-customized").attr("data-select","true");
+    });
+    //點擊左上方logo跟footer logo回home
+    // $(".logoZone,.contact").on("click",function(){
+    //     $(".wrapper").siblings().attr("data-select","false");
+    //     $(".home_page").attr("data-select","true");
+    //     $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+    //     $(".option-home").attr("data-select","true");
+    // });
+    //點擊首頁wireframe圖前往該頁
+    $(".zone__image--wireframe").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".wireframe_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-wireframe").attr("data-select","true");
+    });
+    //點擊首頁mobile圖前往該頁
+    $(".zone__image--mobile").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".mobile_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-mobile").attr("data-select","true");
+    });
+    //點擊首頁desktop圖前往該頁
+    $(".zone__image--desktop").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".desktop_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-desktop").attr("data-select","true");
+    });
+    //點擊首頁varied圖前往該頁
+    $(".zone__image--varied").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".varied_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-varied").attr("data-select","true");
+    });
+    //點擊首頁customized圖前往該頁
+    $(".zone__image--customized").on("click",function(){
+        $(".wrapper").siblings().attr("data-select","false");
+        $(".customized_page").attr("data-select","true");
+        $(".topOption li,.optionLine a").siblings().attr("data-select","false");
+        $(".option-customized").attr("data-select","true");
+    });
+    //切換頁面----------------------------------------------
 
 </script>
 
